@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<script>
+
+var table = "<table border='1' width='500'>";
+var tr = 1, td, style;
+	
+while(tr <= 8){
+    table += "<tr>";
+    td = 1;
+    if (tr % 2 != 0){
+		while(td <= 8){
+        	if(td % 2 == 0){
+            	style = "style='background-color: black;'";
+			}
+			else {
+				style = "style='background-color: white;'";
+			}
+			table += "<td "+style+">"+"</td>";
+        	td++;
+		}
+	}
+	else if (tr % 2 == 0){
+		while(td <= 8){
+        	if(td % 2 != 0){
+           		style = "style='background-color: black;'"; 
+			}
+			else {
+				style = "style='background-color: white;'";
+			}
+			table += "<td "+style+">"+"</td>";
+        	td++;
+		}
+	}
+	
+    table += "</tr>";
+    tr++;
+}
+    table += "</table>";
+	
+
+document.write(table);
+</script>
+	
+</body>
+</html>
